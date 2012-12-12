@@ -82,14 +82,14 @@ URL:      www.noaesthetic.com
          default="#f9f9f9" value="#eeeeee"/>
      <Variable name="post.footer.border.color" description="Shadow Color" type="color" default="#eeeeee" value="#eeeeee"/>
    </Group>
-
+   /* bqmr { date, <h2> to <div>
    <Group description="Gadgets" selector="h2">
      <Variable name="widget.title.font" description="Title Font" type="font"
         default="normal bold 11px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal bold 11px 'Trebuchet MS',Trebuchet,Verdana,sans-serif"/>
      <Variable name="widget.title.text.color" description="Title Color" type="color" default="#000000" value="#000000"/>
      <Variable name="widget.alternate.text.color" description="Alternate Color" type="color" default="#999999" value="#999999"/>
    </Group>
-
+    */
    <Group description="Images" selector=".main-inner">
      <Variable name="image.background.color" description="Background Color" type="color" default="#ffffff" value="#ffffff"/>
      <Variable name="image.border.color" description="Border Color" type="color" default="#eeeeee" value="#eeeeee"/>
@@ -1430,7 +1430,7 @@ head.appendChild(script);
 <b:includable id='mobile-post' var='post'>
   <div class='date-outer'>
     <b:if cond='data:post.dateHeader'>
-      <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
+    <div class='date-header'><span><data:post.dateHeader/></span></div><!--bqmr { date, <h2> to <div> }-->
     </b:if>
     <div class='date-posts'>
       <div class='post-outer'>
@@ -1564,7 +1564,7 @@ head.appendChild(script);
           &lt;div class=&quot;date-outer&quot;&gt;
         </b:if>
         <b:if cond='data:post.dateHeader'>
-          <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
+          <div class='date-header'><span><data:post.dateHeader/></span></div><!--bqmr { date, <h2> to <div> }-->
         </b:if>
         <b:if cond='data:post.isDateStart'>
           &lt;div class=&quot;date-posts&quot;&gt;
@@ -2012,7 +2012,7 @@ head.appendChild(script);
 <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
+    <div class='title'><data:title/></div><!--bqmr { date, <h2> to <div> }-->
   </b:if>
   <div class='widget-content'>
     <data:content/>
@@ -2024,7 +2024,7 @@ head.appendChild(script);
 <b:widget id='Profile1' locked='false' title='自己紹介' type='Profile'>
 <b:includable id='main'>
     <b:if cond='data:title != &quot;&quot;'>
-      <h2><data:title/></h2>
+      <div><data:title/></div><!--bqmr { date, <h2> to <div> }-->
     </b:if>
     <div class='widget-content'>
     <b:if cond='data:team == &quot;true&quot;'> <!-- team blog profile -->
@@ -2063,7 +2063,7 @@ head.appendChild(script);
 <b:widget id='BlogArchive1' locked='false' title='Archives' type='BlogArchive'>
 <b:includable id='main'>
   <b:if cond='data:title'>
-    <h2><data:title/></h2>
+    <div><data:title/></div><!--bqmr { date, <h2> to <div> }-->
   </b:if>
   <div class='widget-content'>
   <div id='ArchiveList'>
@@ -2146,7 +2146,7 @@ head.appendChild(script);
 <b:widget id='Label1' locked='false' title='Categories' type='Label'>
 <b:includable id='main'>
   <b:if cond='data:title'>
-    <h2><data:title/></h2>
+    <div><data:title/></div><!--bqmr { date, <h2> to <div> }-->
   </b:if>
   <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
     <b:if cond='data:display == &quot;list&quot;'>
