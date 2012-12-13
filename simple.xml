@@ -64,7 +64,7 @@ URL:      www.noaesthetic.com
      <Variable name="tabs.selected.background.color" description="Selected Color" type="color" default="#eeeeee" value="#eeeeee"/>
    </Group>
 
-   <Group description="Post Title" selector="h2.post-title, .comments h4"> /* bqmr{ post title or entry-title, <h3> to <h2> } */
+   <Group description="Post Title" selector="h3.post-title, .comments h4">
      <Variable name="post.title.font" description="Font" type="font"
          default="normal normal 22px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 22px 'Trebuchet MS',Trebuchet,Verdana,sans-serif"/>
    </Group>
@@ -82,14 +82,14 @@ URL:      www.noaesthetic.com
          default="#f9f9f9" value="#eeeeee"/>
      <Variable name="post.footer.border.color" description="Shadow Color" type="color" default="#eeeeee" value="#eeeeee"/>
    </Group>
-   /* bqmr { date, <h2> to <div>
+
    <Group description="Gadgets" selector="h2">
      <Variable name="widget.title.font" description="Title Font" type="font"
         default="normal bold 11px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal bold 11px 'Trebuchet MS',Trebuchet,Verdana,sans-serif"/>
      <Variable name="widget.title.text.color" description="Title Color" type="color" default="#000000" value="#000000"/>
      <Variable name="widget.alternate.text.color" description="Alternate Color" type="color" default="#999999" value="#999999"/>
    </Group>
-    */
+
    <Group description="Images" selector=".main-inner">
      <Variable name="image.background.color" description="Background Color" type="color" default="#ffffff" value="#ffffff"/>
      <Variable name="image.border.color" description="Border Color" type="color" default="#eeeeee" value="#eeeeee"/>
@@ -330,7 +330,6 @@ $(content.background.color.selector) {
 
 /* Headings
 ----------------------------------------------- */
-/* bqmr{ date, <h2> to <div>
 h2 {
   margin: 0 0 1em 0;
 
@@ -338,7 +337,6 @@ h2 {
   color: $(widget.title.text.color);
   text-transform: uppercase;
 }
-} */
 
 /* Widgets
 ----------------------------------------------- */
@@ -378,7 +376,7 @@ h2 {
   margin: 0 0 $(post.margin.bottom) 0;
 }
 
-h2.post-title, .comments h4 { /* bqmr{ post title or entry-title, <h3> to <h2> } */
+h3.post-title, .comments h4 {
   font: $(post.title.font);
   margin: .75em 0 0;
 }
@@ -541,7 +539,7 @@ body.mobile .AdSense {
   margin: 0 -10px;
 }
 
-.mobile h2.post-title { /* bqmr{ post title or entry-title, <h3> to <h2> } */
+.mobile h3.post-title {
   margin: 0;
 }
 
@@ -583,7 +581,118 @@ body.mobile .AdSense {
 .mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
   border-$startSide: 1px solid $(tabs.border.color);
 }
-]]></b:skin>
+/* my css ★
+----------------------------------------------------------------------*/
+/* .sum, .box {border: solid 1px #007cbb;} */
+.sum {
+background-color: #fefef2;
+}
+.box {
+padding: 10px;
+margin: 10px, 0px;
+background-color: #eeeeee;
+}
+.post h3 {
+    font: normal bold 200% Arial,Verdana,sans-serif;
+    text-transform: none;
+    color:#dd3300;
+    color:#ff3300;
+
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    margin-right: 0;
+    margin-left: -.75em;
+
+    padding: 4px 0px;
+}
+.post h4 {
+    font: normal bold 150% Arial,Verdana,sans-serif;
+    color:#ff3300;
+
+    margin-top: 1.75em;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+.post h5 {
+    font: normal bold 120% Arial,Verdana,sans-serif;
+
+    margin-top:1.75em;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.apps {
+display: block;
+width: 420px;
+padding-top: 5px;
+padding-bottom: 1px;
+-moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+-webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+}
+.apps img{
+border: none;
+-moz-box-shadow: none;
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+.clear {clear: both;}
+
+/* h2
+------------------------------ */
+/* ref.
+http://www.paulund.co.uk/creating-different-css3-box-shadows-effects */
+.post h2 {
+    font: normal bold 200% Arial,Verdana,sans-serif;
+    color:#eb593c;
+    color:#dd3300;    /* from #cc0000 #ff3400, ff3300 */
+    color:#ff3300;
+    background: #fff;
+
+    position:relative;
+
+    background: -moz-linear-gradient(left, #eee 0%, #fbfbfb 15%, #fff 25%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#fbfbfb), color-stop(15%,#53a2e2), color-stop(25%,#fff));
+    background: -webkit-linear-gradient(left, #eee 0%,#fbfbfb 15%,#fff 25%);
+    background: -o-linear-gradient(left, #fbfbfb 0%,#53a2e2 15%,#fff 25%);
+    background: -ms-linear-gradient(left, #fbfbfb 0%,#53a2e2 15%,#fff 25%);
+    background: linear-gradient(left, #fbfbfb 0%,#53a2e2 15%,#fff 25%);
+
+    background: -moz-linear-gradient(left, #dd3300 0%, #fbfbfb 15%, #fff 25%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#fbfbfb), color-stop(15%,#53a2e2), color-stop(25%,#fff));
+    background: -webkit-linear-gradient(left, #eee 0%,#fbfbfb 15%,#fff 25%);
+    background: -o-linear-gradient(left, #fbfbfb 0%,#53a2e2 15%,#fff 25%);
+    background: -ms-linear-gradient(left, #fbfbfb 0%,#53a2e2 15%,#fff 25%);
+    background: linear-gradient(left, #fbfbfb 0%,#53a2e2 15%,#fff 25%);
+
+    left: -1.25em;
+
+    padding:16px 0px;
+    padding-left: 0.75em;
+}
+.post h2:before
+{
+    z-index: -1;
+    position: absolute;
+    content: "";
+
+    bottom: 15px;
+    left: 0.2em;
+
+    height: 50%;
+    width: 60%;
+    background: #666;
+
+    -webkit-box-shadow: 0 15px 10px #3399cc; /* #666 */
+    -moz-box-shadow: 0 15px 10px #3399cc; /* #666 */
+    box-shadow: 0 10px 10px #3399cc; /* #666 */
+
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}]]></b:skin>
 
     <b:template-skin>
       <b:variable default='960px' name='content.width' type='length' value='860px'/>
@@ -1186,7 +1295,7 @@ head.appendChild(script);
 
     <a expr:name='data:post.id'/>
     <b:if cond='data:post.title'>
-        <h2 class='post-title entry-title' itemprop='name'><!--bqmr{ post title or entry-title, <h3> to <h2> }-->
+      <h3 class='post-title entry-title' itemprop='name'>
       <b:if cond='data:post.link'>
         <a expr:href='data:post.link'><data:post.title/></a>
       <b:else/>
@@ -1200,7 +1309,7 @@ head.appendChild(script);
           <data:post.title/>
         </b:if>
       </b:if>
-      </h2>
+      </h3>
     </b:if>
 
     <div class='post-header'>
@@ -1432,7 +1541,7 @@ head.appendChild(script);
 <b:includable id='mobile-post' var='post'>
   <div class='date-outer'>
     <b:if cond='data:post.dateHeader'>
-    <div class='date-header'><span><data:post.dateHeader/></span></div><!--bqmr { date, <h2> to <div> }-->
+      <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
     </b:if>
     <div class='date-posts'>
       <div class='post-outer'>
@@ -1446,7 +1555,7 @@ head.appendChild(script);
 
           <a expr:name='data:post.id'/>
           <b:if cond='data:post.title'>
-            <h2 class='post-title entry-title' itemprop='name'><!--bqmr{ post title or entry-title, <h3> to <h2> }-->
+            <h3 class='post-title entry-title' itemprop='name'>
               <b:if cond='data:post.link'>
                 <a expr:href='data:post.link'><data:post.title/></a>
               <b:else/>
@@ -1460,7 +1569,7 @@ head.appendChild(script);
                   <data:post.title/>
                 </b:if>
               </b:if>
-            </h2>
+            </h3>
           </b:if>
 
           <div class='post-header'>
@@ -1566,7 +1675,7 @@ head.appendChild(script);
           &lt;div class=&quot;date-outer&quot;&gt;
         </b:if>
         <b:if cond='data:post.dateHeader'>
-          <div class='date-header'><span><data:post.dateHeader/></span></div><!--bqmr { date, <h2> to <div> }-->
+          <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
         </b:if>
         <b:if cond='data:post.isDateStart'>
           &lt;div class=&quot;date-posts&quot;&gt;
@@ -1690,9 +1799,9 @@ head.appendChild(script);
 
     <div class='mobile-post-outer'>
       <a expr:href='data:post.url'>
-        <h2 class='mobile-index-title entry-title' itemprop='name'><!--bqmr{ post title or entry-title, <h3> to <h2> }-->
+        <h3 class='mobile-index-title entry-title' itemprop='name'>
           <data:post.title/>
-        </h2>
+        </h3>
 
         <div class='mobile-index-arrow'>&amp;rsaquo;</div>
 
@@ -2014,7 +2123,7 @@ head.appendChild(script);
 <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
-    <div class='title'><data:title/></div><!--bqmr { date, <h2> to <div> }-->
+    <h2 class='title'><data:title/></h2>
   </b:if>
   <div class='widget-content'>
     <data:content/>
@@ -2026,7 +2135,7 @@ head.appendChild(script);
 <b:widget id='Profile1' locked='false' title='自己紹介' type='Profile'>
 <b:includable id='main'>
     <b:if cond='data:title != &quot;&quot;'>
-      <div><data:title/></div><!--bqmr { date, <h2> to <div> }-->
+      <h2><data:title/></h2>
     </b:if>
     <div class='widget-content'>
     <b:if cond='data:team == &quot;true&quot;'> <!-- team blog profile -->
@@ -2065,7 +2174,7 @@ head.appendChild(script);
 <b:widget id='BlogArchive1' locked='false' title='Archives' type='BlogArchive'>
 <b:includable id='main'>
   <b:if cond='data:title'>
-    <div><data:title/></div><!--bqmr { date, <h2> to <div> }-->
+    <h2><data:title/></h2>
   </b:if>
   <div class='widget-content'>
   <div id='ArchiveList'>
@@ -2148,7 +2257,7 @@ head.appendChild(script);
 <b:widget id='Label1' locked='false' title='Categories' type='Label'>
 <b:includable id='main'>
   <b:if cond='data:title'>
-    <div><data:title/></div><!--bqmr { date, <h2> to <div> }-->
+    <h2><data:title/></h2>
   </b:if>
   <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
     <b:if cond='data:display == &quot;list&quot;'>
