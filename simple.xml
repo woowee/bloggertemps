@@ -1184,7 +1184,7 @@ head.appendChild(script);
 
     <a expr:name='data:post.id'/>
     <b:if cond='data:post.title'>
-      <h3 class='post-title entry-title' itemprop='name'>
+      <h2 class='post-title entry-title' itemprop='name'><!--bqmr-->
       <b:if cond='data:post.link'>
         <a expr:href='data:post.link'><data:post.title/></a>
       <b:else/>
@@ -1198,7 +1198,7 @@ head.appendChild(script);
           <data:post.title/>
         </b:if>
       </b:if>
-      </h3>
+      </h2><!--bqmr-->
     </b:if>
 
     <div class='post-header'>
@@ -1444,7 +1444,7 @@ head.appendChild(script);
 
           <a expr:name='data:post.id'/>
           <b:if cond='data:post.title'>
-            <h3 class='post-title entry-title' itemprop='name'>
+            <h2 class='post-title entry-title' itemprop='name'><!--bqmr-->
               <b:if cond='data:post.link'>
                 <a expr:href='data:post.link'><data:post.title/></a>
               <b:else/>
@@ -1458,7 +1458,7 @@ head.appendChild(script);
                   <data:post.title/>
                 </b:if>
               </b:if>
-            </h3>
+            </h2><!--bqmr-->
           </b:if>
 
           <div class='post-header'>
@@ -1564,7 +1564,7 @@ head.appendChild(script);
           &lt;div class=&quot;date-outer&quot;&gt;
         </b:if>
         <b:if cond='data:post.dateHeader'>
-          <div class='date-header'><span><data:post.dateHeader/></span></div><!--bqmr-->
+          <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
         </b:if>
         <b:if cond='data:post.isDateStart'>
           &lt;div class=&quot;date-posts&quot;&gt;
@@ -1688,9 +1688,9 @@ head.appendChild(script);
 
     <div class='mobile-post-outer'>
       <a expr:href='data:post.url'>
-        <h3 class='mobile-index-title entry-title' itemprop='name'>
+        <h2 class='mobile-index-title entry-title' itemprop='name'><!--bqmr-->
           <data:post.title/>
-        </h3>
+        </h2><!--bqmr-->
 
         <div class='mobile-index-arrow'>&amp;rsaquo;</div>
 
