@@ -1221,7 +1221,7 @@ head.appendChild(script);
 
     <b:if cond='data:post.hasJumpLink'>
       <div class='jump-link'>
-        <a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'><data:post.jumpText/></a>
+        <a expr:href='data:post.url' expr:title='data:post.title'><data:post.jumpText/></a>
       </div>
     </b:if>
 
@@ -1564,7 +1564,7 @@ head.appendChild(script);
           &lt;div class=&quot;date-outer&quot;&gt;
         </b:if>
         <b:if cond='data:post.dateHeader'>
-          <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
+          <div class='date-header'><span><data:post.dateHeader/></span></div><!--bqmr-->
         </b:if>
         <b:if cond='data:post.isDateStart'>
           &lt;div class=&quot;date-posts&quot;&gt;
