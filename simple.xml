@@ -647,6 +647,31 @@ body.mobile .AdSense {
       }
       ]]>
     </b:template-skin>
+    <!-- bqm{ jquery  -->
+    <script src='http://code.jquery.com/jquery-latest.min.js' type='text/javascript'/>
+    <script type='text/javascript'>
+    //<![CDATA[
+    <!--
+    $(function(){
+        $('div.hentry').each(function(){
+            var _href = '';
+            /* url */
+            if ($('h2.entry-title a', this).attr('href')){
+                var _href = $('h2.entry-title a', this).attr('href');
+            }
+
+            /* id */
+            $('div.sum a', this).each(function(){
+                var _id = $(this).attr('href');
+                $(this).attr('href', _href + _id);
+            });
+        });
+        /*alert('roaded!!');*/
+    });
+    -->
+    //]]>
+    </script>
+    <!-- jquery }bqm -->
   </head>
 
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
@@ -1209,7 +1234,7 @@ head.appendChild(script);
       <!-- Then use the post body as the schema.org description,
           for good G+/FB snippeting. -->
       <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='description articleBody'>
-        <data:post.body/>
+        <data:post.body/>&quot;だめだろ&quot;
         <div style='clear: both;'/> <!-- clear for photos floats -->
       </div>
     <b:else/>
@@ -1221,7 +1246,7 @@ head.appendChild(script);
 
     <b:if cond='data:post.hasJumpLink'>
       <div class='jump-link'>
-        <a expr:href='data:post.url' expr:title='data:post.title'><data:post.jumpText/></a>
+        <a expr:href='data:post.url' expr:title='data:post.title'><data:post.jumpText/></a><!--bqmr-->
       </div>
     </b:if>
 
